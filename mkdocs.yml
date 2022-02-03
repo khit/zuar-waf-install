@@ -1,0 +1,38 @@
+site_name: Zuar WAF
+theme:
+  name: material
+  icon:
+    logo: material/alpha-z-circle
+  palette:
+    - media: "(prefers-color-scheme: light)" 
+      scheme: default
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)" 
+      scheme: slate
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+repo_url: https://github.com/khit/zuar-waf-install
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.tasklist:
+      custom_checkbox: true
+      clickable_checkbox: true
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true 
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+nav:
+  - 'Home': index.md
+  - 'Customer-Hosted Deployments':
+    - 'Linux': 'customer-hosted/customer-hosted-linux.md'
+    - 'Windows': 'customer-hosted/customer-hosted-windows.md'
+  - 'Common Tasks':
+    - 'Command Line': 'common-tasks/command-line.md'
+    - 'Git': 'common-tasks/git.md'
+    - 'SSH': 'common-tasks/ssh.md'
