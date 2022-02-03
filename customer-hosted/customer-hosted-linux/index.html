@@ -1,0 +1,877 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.9">
+    
+    
+      
+        <title>Linux - Zuar Rapid Portal Installation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.2b4465f4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.e6a45f82.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#install-rapid-portal-customer-hosted-linux" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Zuar Rapid Portal Installation" class="md-header__button md-logo" aria-label="Zuar Rapid Portal Installation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 7v2h4l-4 6v2h6v-2h-4l4-6V7H9m3-5a10 10 0 0 1 10 10 10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Zuar Rapid Portal Installation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Linux
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/khit/zuar-waf-install/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Zuar Rapid Portal Installation" class="md-nav__button md-logo" aria-label="Zuar Rapid Portal Installation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 7v2h4l-4 6v2h6v-2h-4l4-6V7H9m3-5a10 10 0 0 1 10 10 10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2z"/></svg>
+
+    </a>
+    Zuar Rapid Portal Installation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/khit/zuar-waf-install/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../cloud-hosted/">Cloud-Hosted</a>
+          
+            <label for="__nav_2">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Cloud-Hosted" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Cloud-Hosted
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cloud-hosted/aws/" class="md-nav__link">
+        AWS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cloud-hosted/digital-ocean/" class="md-nav__link">
+        Digital Ocean
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Customer-Hosted
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Customer-Hosted" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Customer-Hosted
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Linux
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Linux
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pre-requisites-pre-flight" class="md-nav__link">
+    Pre-requisites &amp; Pre-flight
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    Installation
+  </a>
+  
+    <nav class="md-nav" aria-label="Installation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#transfer-zuar-deployment-scripts" class="md-nav__link">
+    Transfer Zuar Deployment Scripts
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#install-zip-unzip-deployment-scripts" class="md-nav__link">
+    Install Zip &amp; Unzip Deployment Scripts
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#install-docker" class="md-nav__link">
+    Install Docker
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#install-docker-compose" class="md-nav__link">
+    Install Docker Compose
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#point-waf-to-tableau" class="md-nav__link">
+    Point WAF to Tableau
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#run-deployment" class="md-nav__link">
+    Run Deployment
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#start-waf" class="md-nav__link">
+    Start WAF
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-ssl-certs" class="md-nav__link">
+    Create SSL certs
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#congrats" class="md-nav__link">
+    Congrats! 
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../customer-hosted-windows/" class="md-nav__link">
+        Windows
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Common Tasks
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Common Tasks" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Common Tasks
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../common-tasks/command-line/" class="md-nav__link">
+        Command Line
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../common-tasks/git/" class="md-nav__link">
+        Git
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../common-tasks/ssh/" class="md-nav__link">
+        SSH
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pre-requisites-pre-flight" class="md-nav__link">
+    Pre-requisites &amp; Pre-flight
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    Installation
+  </a>
+  
+    <nav class="md-nav" aria-label="Installation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#transfer-zuar-deployment-scripts" class="md-nav__link">
+    Transfer Zuar Deployment Scripts
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#install-zip-unzip-deployment-scripts" class="md-nav__link">
+    Install Zip &amp; Unzip Deployment Scripts
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#install-docker" class="md-nav__link">
+    Install Docker
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#install-docker-compose" class="md-nav__link">
+    Install Docker Compose
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#point-waf-to-tableau" class="md-nav__link">
+    Point WAF to Tableau
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#run-deployment" class="md-nav__link">
+    Run Deployment
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#start-waf" class="md-nav__link">
+    Start WAF
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-ssl-certs" class="md-nav__link">
+    Create SSL certs
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#congrats" class="md-nav__link">
+    Congrats! 
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+<a href="https://github.com/khit/zuar-waf-install/edit/main/docs/customer-hosted/customer-hosted-linux.md" title="Edit this page" class="md-content__button md-icon">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+</a>
+
+
+<h1 id="install-rapid-portal-customer-hosted-linux">Install Rapid Portal - Customer-hosted Linux</h1>
+<p>These instructions apply to customers hosting <em>Zuar Rapid Portal</em> on their own server. If Portal is to be installed to a cloud-based server (e.g. AWS, Digital Ocean), refer to <a href="../../cloud-hosted">the cloud-hosted section</a>. </p>
+<h2 id="pre-requisites-pre-flight">Pre-requisites &amp; Pre-flight</h2>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> <strong>Server Operating System</strong>: Ubuntu 18</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> <strong>SSH access</strong><ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> <strong>Login:</strong> admin username, password, SSH key</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> <strong>Firewall access:</strong> VPN or IP whitelisting, if required</li>
+</ul>
+</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> <strong>External Access</strong><ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> <strong>Port 80</strong>: Let's Encrypt will require HTTP access to setup SSL certificate</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> <strong>Port 443</strong>: WAF is accessed via a web browser via HTTPS</li>
+</ul>
+</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> <strong>Deployment Files</strong><ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Access to <code>zuar-deployment</code> repository OR deploy.zip file (download location needed)</li>
+</ul>
+</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> <strong>Configuration Settings</strong><ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> <strong>Tableau Online or Tableau Server URL</strong> from which vizzes will be displayed</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> <strong>WAF URL</strong> e.g. hostname.zuarbase.net</li>
+</ul>
+</li>
+</ul>
+<h2 id="installation">Installation</h2>
+<h3 id="transfer-zuar-deployment-scripts">Transfer Zuar Deployment Scripts</h3>
+<p>After logging into the target server via <a href="../../common-tasks/ssh/">SSH</a> as an admin, use one of the following methods to transfer the Zuar Deployment Scripts to the server:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg></span> Git Clone</label><label for="__tabbed_1_2"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14 2 6 6v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8m4 18V9h-5V4H6v16h12m-6-8 4 4h-2.5v3h-3v-3H8l4-4z"/></svg></span> File Upload</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>On the server, download files via this command: <code>git clone https://github.com/zuarbase/zuar-deployment</code></p>
+<ul>
+<li>During this step you'll be asked to authenticate to GotHub using your GitHub Personal Access Token (PAT)</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<p>If you don't have access to Zuar's git repos, upload the deployment file to the server: </p>
+<ol>
+<li>Obtain <code>deploy.zip</code> file from Andy</li>
+<li>Use <a href="../../common-tasks/ssh/">scp</a> to upload file to server</li>
+</ol>
+</div>
+</div>
+</div>
+<h3 id="install-zip-unzip-deployment-scripts">Install Zip &amp; Unzip Deployment Scripts</h3>
+<p>Using the package managemr install the <code>zip</code> application: <code>sudo apt install zip unzip</code>.</p>
+<p>Once <code>zip</code> is installed, unzip the Deployment Scripts: <code>unzip deploy.zip</code></p>
+<h3 id="install-docker">Install Docker</h3>
+<p>Install docker: <code>bash install_docker.sh</code></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Exit the SSH session and reconnect to complete the installation.</p>
+</div>
+<p>Once reconnected to the server, test docker with: <code>docker run hello-world</code> (do not run with <code>sudo</code>).</p>
+<p>Look for the following lines in the output:</p>
+<div class="highlight"><span class="filename">Docker hello world output</span><pre><span></span><code>Hello from Docker! This message shows that your installation appears to be working correctly.
+</code></pre></div>
+<h3 id="install-docker-compose">Install Docker Compose</h3>
+<p>Ater reconnecting to the server, install docker-compose: <code>bash install_docker_compose.sh</code></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Exit the SSH session and reconnect to complete the installation.</p>
+</div>
+<p>Test the docker-compose install: <code>docker-compose --help</code></p>
+<p>You should see a help page displayed.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If no help page displays and the connection seems frozen, give it a few minutes. If the help text still hasn't been displayed, hold down ctrl-c until it returns to a prompt (you may have to hold it down for &gt; 1m); wait a bit and run again.</p>
+</div>
+<h3 id="point-waf-to-tableau">Point WAF to Tableau</h3>
+<p>Open the <code>.env</code> file (this file is part of the Deployment Scripts) in an editor: <code>nano .env</code></p>
+<p>Update the following lines to point to the correct Tableau Server or Tableau Online instance: </p>
+<p>TODO</p>
+<h3 id="run-deployment">Run Deployment</h3>
+<p>Run deployment script: <code>bash deploy.sh</code></p>
+<h3 id="start-waf">Start WAF</h3>
+<p>Once the deployment script has completed, start WAF: <code>docker-compose up -d</code></p>
+<p>Check for errors in the docker logs: <code>docker-compose logs -f</code>
+    - should see only success msgs, no errors, ctrl-c to exit
+    - to see what's running: <code>docker ps</code></p>
+<p>(add example list of ps output)</p>
+<h3 id="create-ssl-certs">Create SSL certs</h3>
+<p>Create and apply a Let's Encrypt SSL certificate to allow the site to be reached via https without browser security errors: <code>docker-compose run --rm zwaf acme &lt;hostname&gt;.zuarbase.net</code> (replace <code>&lt;hostname&gt;</code> with your sub-domain)</p>
+<pre><code>- firewall problem: the above cmd failed with: 
+    - [Wed Feb  2 21:22:54 UTC 2022] kye-test.zuarbase.net:Verify error:Fetching http://kye-test.zuarbase.net/.well-known/acme-challenge/6fKUASdJlppOsBZ0rY2QxoxY4hVBUgK3Gf5B-V898r8: Timeout during connect (likely firewall problem) [Wed Feb  2 21:22:54 UTC 2022] Please add '--debug' or '--log' to check more details.
+    - this is a firewall issue. Andy had to open port to the world. BEFORE running this cmd, check the url on [https://www.isitdownrightnow.com/](https://www.isitdownrightnow.com/)
+</code></pre>
+<p>Restart docker: <code>docker-compose down &amp;&amp; docker-compose up</code></p>
+<h2 id="congrats">Congrats! <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.53 1.45-1.08 1.08 1.6 1.6c.22.25.33.54.33.87s-.11.64-.33.86L11.5 9.47l1 1.08 3.63-3.61c.53-.59.79-1.24.79-1.94s-.26-1.36-.79-1.95l-1.6-1.6m-3.98 2.02L9.47 4.55l.61.56c.22.22.33.52.33.89s-.11.67-.33.89l-.61.56 1.08 1.08.56-.61c.53-.59.8-1.23.8-1.92 0-.72-.27-1.37-.8-1.97l-.56-.56M21 5.06c-.69 0-1.33.27-1.92.8l-5.63 5.64 1.08 1 5.58-5.56c.25-.25.55-.38.89-.38s.64.13.89.38l.61.61 1.03-1.08-.56-.61c-.59-.53-1.25-.8-1.97-.8M7 8 2 22l14-5-9-9m12 3.06c-.7 0-1.34.27-1.94.8l-1.59 1.59 1.08 1.08 1.59-1.59c.25-.25.53-.38.86-.38.33 0 .63.13.88.38l1.62 1.59 1.05-1.03-1.6-1.64c-.59-.53-1.25-.8-1.95-.8z"/></svg></span></h2>
+<p>The WAF is up and running. Open a web browser, go to your Rapid Portal's URL to login and let the fun begin!</p>
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../../cloud-hosted/digital-ocean/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Digital Ocean" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Digital Ocean
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../customer-hosted-windows/" class="md-footer__link md-footer__link--next" aria-label="Next: Windows" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Windows
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.indexes"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.22074ed6.min.js"}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.960e086b.min.js"></script>
+      
+    
+  </body>
+</html>
