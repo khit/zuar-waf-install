@@ -9,3 +9,9 @@ SSH (Secure SHell) is a command-line remote connection tool. It allows you to ac
 * Linux
 
 ## Connecting to a remote computer via SSH
+
+### Do I use a private key or a password to login via SSH?
+
+### What's the command to connect to the target server?
+
+### I'm connected, now what?
