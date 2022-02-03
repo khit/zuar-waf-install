@@ -1,4 +1,6 @@
-# Customer-hosted Linux
+# Install Rapid Portal - Customer-hosted Linux
+
+These instructions apply to customers hosting *Zuar Rapid Portal* on their own server. If Portal is to be installed to a cloud-based server (e.g. AWS, Digital Ocean), refer to [the cloud-hosted section](/cloud-hosted). 
 
 ## Pre-requisites & Pre-flight
 - [ ] **Server Operating System**: Ubuntu 18

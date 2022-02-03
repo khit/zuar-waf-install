@@ -1,4 +1,4 @@
-site_name: Zuar WAF
+site_name: Zuar Rapid Portal Installation
 theme:
   name: material
   icon:
@@ -14,7 +14,10 @@ theme:
       toggle:
         icon: material/toggle-switch
         name: Switch to light mode
+  features:
+    - navigation.indexes
 repo_url: https://github.com/khit/zuar-waf-install
+edit_uri: edit/main/docs
 markdown_extensions:
   - admonition
   - pymdownx.details
@@ -29,7 +32,11 @@ markdown_extensions:
       emoji_generator: !!python/name:materialx.emoji.to_svg
 nav:
   - 'Home': index.md
-  - 'Customer-Hosted Deployments':
+  - 'Cloud-Hosted': 
+    - cloud-hosted/index.md
+    - 'AWS': 'cloud-hosted/aws.md'
+    - 'Digital Ocean': 'cloud-hosted/digital-ocean.md'
+  - 'Customer-Hosted':
     - 'Linux': 'customer-hosted/customer-hosted-linux.md'
     - 'Windows': 'customer-hosted/customer-hosted-windows.md'
   - 'Common Tasks':
