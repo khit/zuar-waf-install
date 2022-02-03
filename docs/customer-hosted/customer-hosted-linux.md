@@ -11,19 +11,21 @@ These instructions apply to customers hosting *Zuar Rapid Portal* on their own s
     -  [ ] **Port 80**: Let's Encrypt will require HTTP access to setup SSL certificate
     -  [ ] **Port 443**: WAF is accessed via a web browser via HTTPS
 -  [ ] **Deployment Files**
-    -  [ ] Zuar GitHub deployment repo access or deploy.zip file (download location needed)
+    -  [ ] Access to `zuar-deployment` repository OR deploy.zip file (download location needed)
 -  [ ] **Configuration Settings**
     -  [ ] **Tableau Online or Tableau Server URL** from which vizzes will be displayed
     -  [ ] **WAF URL** e.g. hostname.zuarbase.net
 
-## Deploy WAF
+## Installation
 
 ### Transfer Zuar Deployment Scripts
 
-After logging into the target server via [SSH](../common-tasks/ssh.md) as an admin, transfer the Zuar Deployment Scripts to the server:
+After logging into the target server via [SSH](../common-tasks/ssh.md) as an admin, use one of the following methods to transfer the Zuar Deployment Scripts to the server:
 
 === ":fontawesome-brands-github: Git Clone"
     On the server, download files via this command: `git clone https://github.com/zuarbase/zuar-deployment`
+    
+    * During this step you'll be asked to authenticate to GotHub using your GitHub Personal Access Token (PAT)
 
 === ":material-file-upload-outline: File Upload"
     If you don't have access to Zuar's git repos, upload the deployment file to the server: 
@@ -48,7 +50,7 @@ Once reconnected to the server, test docker with: `docker run hello-world` (do n
 
 Look for the following lines in the output:
 
-``` title="Docker hello world output snippet)"
+``` title="Docker hello world output"
 Hello from Docker! This message shows that your installation appears to be working correctly.
 ```
 
@@ -100,4 +102,4 @@ Restart docker: `docker-compose down && docker-compose up`
 
 ## Congrats! :material-party-popper:
 
-The WAF is up and running. Login and let the fun begin!
+The WAF is up and running. Open a web browser, go to your Rapid Portal's URL to login and let the fun begin!
